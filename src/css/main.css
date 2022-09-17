@@ -1,0 +1,60 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    background-color: lightgray;
+}
+
+div.buttons {
+    display: grid;
+    place-items: center;
+    gap: 8px;
+}
+
+button {
+    position: relative;
+    padding: 5px 7px;
+    background-color: #22cccc;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button[data-save] {
+    background-color: #22cccc;
+}
+
+button[data-discard] {
+    background-color: #dd3333;
+}
+
+main.app {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 50px auto;
+    width: inherit;
+    height: inherit;
+}
+
+canvas.network {
+    background-color: black;
+}
+
+canvas.scene {
+    background-color: gray;
+}
